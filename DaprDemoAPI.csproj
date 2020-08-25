@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>DaprDemoAPI</RootNamespace>
+    <UserSecretsId>729a1e0dffa8422b05e5e672268f23bf</UserSecretsId>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Dapr.AspNetCore" Version="0.10.0-preview01" />
+    <PackageReference Include="RestClient" Version="3.0.0.21" />
+    <PackageReference Include="RestClient.Net" Version="4.1.0" />
+  </ItemGroup>
+</Project>

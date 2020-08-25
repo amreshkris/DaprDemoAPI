@@ -1,0 +1,47 @@
+﻿apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: daprdemoapi
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: daprdemoapi
+  template:
+    metadata:
+      labels:
+        app: daprdemoapi
+      annotations:
+        dapr.io/enabled: "true"
+        dapr.io/id: "daprdemoapi"
+        dapr.io/port : "80"
+    spec:
+      containers:
+      - name: daprdemoapi
+        image: amreshkris.azurecr.io/daprdemoapi:latest
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 80
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: daprdemoapi
+  labels:
+    app: daprdemoapi
+spec:
+  selector:
+    app: daprdemoapi
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 80    
+  type: LoadBalancer
+
+
+
+  

@@ -1,0 +1,15 @@
+apiVersion: dapr.io/v1alpha1
+kind: Component
+metadata:
+  name: statestore
+spec:
+  type: state.azure.cosmosdb
+  metadata:
+  - name: url
+    value: https://acddapr.documents.azure.com:443/
+  - name: masterKey
+    value: 8yIcJvBjZpmTRVqFM4mmluF4tyn5ODEqzmVfIMOmbH4N7p6QiffaLdLyvBjR4Zprd1tqob6P4ujtcTCuzF2EdA==
+  - name: database
+    value: amresh_dapr_database
+  - name: collection
+    value: amresh_dapr_container

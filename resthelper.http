@@ -1,0 +1,37 @@
+POST http://40.81.225.33:80/state/deposit
+Content-Type: application/json
+
+{ "id": "11", "amount": 12 }
+
+###
+
+POST http://localhost:31108/state/deposit
+Content-Type: application/json
+
+{ "id": "11", "amount": 12 }
+###
+GET http://40.81.225.33:80/state/ping
+
+###
+GET http://40.81.225.33:80/state/11
+
+###
+POST http://40.81.225.33:80/state/withdraw
+Content-Type: application/json
+
+{ "id": "11", "amount": 4 }
+
+
+###
+
+GET http://localhost:32302/ports
+
+
+###
+POST http://localhost:32728/publishmessage/
+Content-Type: application/json
+
+{"Id":"101","Name":"a","DoesLikeSession":true,"Message":null,"EmailId":"amresh.kris@gmail.com"}
+
+
+###
