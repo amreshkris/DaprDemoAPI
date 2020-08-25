@@ -8,7 +8,7 @@ spec:
   - name: url
     value: https://acddapr.documents.azure.com:443/
   - name: masterKey
-    value: 8yIcJvBjZpmTRVqFM4mmluF4tyn5ODEqzmVfIMOmbH4N7p6QiffaLdLyvBjR4Zprd1tqob6P4ujtcTCuzF2EdA==
+    value: 
   - name: database
     value: amresh_dapr_database
   - name: collection
