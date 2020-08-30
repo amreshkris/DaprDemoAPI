@@ -8,8 +8,8 @@ spec:
   - name: url
     value: https://acddapr.documents.azure.com:443/
   - name: masterKey
-    value: 
+    value: <****Use the right key***>
   - name: database
-    value: amresh_dapr_database
+    value: <database name>
   - name: collection
-    value: amresh_dapr_container
+    value: <cosmos db collection name>

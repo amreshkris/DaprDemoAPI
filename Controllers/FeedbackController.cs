@@ -42,12 +42,13 @@ namespace DaprDemoAPI.Controllers
         {
              _logger.LogInformation($"Feedback received {feedback.Id}");
 
-            /*Read from state store and update name if key emailid matches
+            /*Read from state store and update name if key - first name matches
               Uses .NET SDK Method to retrieve from the state store */
+            //Equivalent to call - http://localhost:3500/v1.0/state/<store-name>/<value>
 
-            var state = await daprClient.GetStateEntryAsync<UserFeedback>(StoreName, feedback.EmailId);
+            var state = await daprClient.GetStateEntryAsync<UserFeedback>(StoreName, feedback.FirstName);
 
-            state.Value ??= new UserFeedback() { Id = feedback.EmailId };
+            state.Value ??= new UserFeedback() { Id = feedback.FirstName };
             state.Value.EmailId = feedback.EmailId;
             state.Value.Id = feedback.Id;   
             state.Value.Message = feedback.Message;
